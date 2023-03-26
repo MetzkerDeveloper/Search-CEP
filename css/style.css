@@ -1,0 +1,52 @@
+*{
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Merriweather Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(180deg,
+     #fafa47, #fcb32c);
+}
+
+.conteiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+.cep-form{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffca2b;
+    width: 400px;
+    height: 400px;
+    box-shadow: 2px 2px 2px 2px;
+    border-radius: 5px;
+}
+
+.cep-form h2 {
+    text-align: center;
+    color: #000000;
+    margin-top: 10px;
+}
+
+.cep-form input{
+    border-radius: 4px;
+    border: none;
+    padding: 5px;
+}
+.cep-form label{
+    padding-top: 3px;
+    margin-top: 10px;
+}
+
+.cep-form footer{
+    text-align: center;
+    font-size: 12px;
+    color: #fffcccff;
+}
