@@ -31,21 +31,30 @@ const showCEP = async (cep)=>{
         inputAddress.value = data.address
 }
 } 
-// evento
+// eventos
 
- inputCep.addEventListener("blur", (e)=>{
-      e.preventDefault()
-  const cep = inputCep.value;
- 
- showCEP(cep)
- })
+
+// Evento para pesquisar quando clicar fora do input de pesquisa
+
+//  inputCep.addEventListener("blur", (e)=>{
+//       e.preventDefault()
+//   const cep = inputCep.value;
+//     if(cep){
+//         showCEP(cep)
+//     }else{
+//         alert("Digite um CEP!")
+//     }
+//  })
 
 inputCep.addEventListener("keyup", (e)=>{
-    if(e.code ==="Enter"){
+    if(e.keyCode == "13"){
         const cep = e.target.value;
-
-        showCEP(cep);
-
+        
+        if(cep){
+            showCEP(cep)
+        }else{
+            alert("Digite um CEP!")
+        }
     }
 })
 
