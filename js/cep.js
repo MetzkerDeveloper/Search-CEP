@@ -18,7 +18,7 @@ const getCep = async (cep)=>{
     }
     else{
     toggleLoad()
-    const apiCep = ` https://cdn.apicep.com/file/apicep/${cep}.json`;
+    const apiCep = ` https://viacep.com.br/ws/${cep}/json/ `;
     const response = await fetch(apiCep);
     const data = await response.json();
     return data ;
@@ -33,10 +33,10 @@ const showCEP = async (cep)=>{
             inputCep.value =""
         }
         else{
-        inputState.value = data.state
-        inputCity.value = data.city
-        inputDistrict.value = data.district
-        inputAddress.value = data.address
+        inputState.value = data.uf
+        inputCity.value = data.localidade
+        inputDistrict.value = data.bairro
+        inputAddress.value = data.logradouro
         toggleLoad() }
 } 
 // Criação de eventos
