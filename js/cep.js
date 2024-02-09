@@ -28,17 +28,18 @@ const getCep = async (cep)=>{
 const showCEP = async (cep)=>{
     const data = await getCep(cep);
     
-        if(inputCep.value.length < 9){
-            alert("Preencha um CEP válido!")
-            inputCep.value =""
-        }
-        else{
+        // if(inputCep.value.length < 9){
+        //     alert("Preencha um CEP válido!")
+        //     inputCep.value =""
+        // }
+        // else{
+     
         inputState.value = data.uf
         inputCity.value = data.localidade
         inputDistrict.value = data.bairro
         inputAddress.value = data.logradouro
         toggleLoad() }
-} 
+// } 
 // Criação de eventos
 
 // Evento para pesquisar quando clicar fora do input de pesquisa
